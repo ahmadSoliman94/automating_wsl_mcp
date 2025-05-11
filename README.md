@@ -35,32 +35,21 @@ The automation provides several tools through the MCP interface:
 - Windows with WSL installed
 - Required packages (see `requirements.txt`)
 
-### Installation
-
-1. Clone this repository:
-   ```
-   git clone https://github.com/yourusername/WSL-Automation-MCP.git
-   cd WSL-Automation-MCP
-   ```
-
-2. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. Run the client:
-   ```
-   python client.py
-   ```
 
 ### Configuration
 
 To integrate with Claude or other MCP-compatible AI assistants, add the following to your configuration:
 
 ```json
-"wsl_automation": {
-  "command": "python",
-  "args": ["wsl_automation_server.py"]
+{
+  "mcpServers": {
+    "wsl_automation": {
+      "command": "C:\\Users\\Name\\miniconda3\\envs\\mcp\\python.exe",
+      "args": [
+        "C:\\Users\\Name\\Desktop\\mcp_PyAutoGUI\\wsl_automation_server.py"
+      ]
+    }
+  }
 }
 ```
 
